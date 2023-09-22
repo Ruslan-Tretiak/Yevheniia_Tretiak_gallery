@@ -1,0 +1,167 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+@import url('./fonts.css');
+/* @import '../../node_modules/modern-normalize/modern-normalize.css';
+@import url('../../node_modules/slim-select/dist/slimselect.css');
+@import url(../../node_modules/swiper/swiper-bundle.css);
+@import url('../../node_modules/pretty-checkbox/dist/pretty-checkbox.min.css'); */
+@import url('./reset.css');
+@import url('./common.css');
+/* @import url('./section/section-main.css');
+@import url('./section/sidebar.css');
+@import url('./section/header.css');
+@import url('./section/hero.css');
+@import url('./section/all-categories.css');
+@import url('./section/recipes.css');
+@import url('./section/popular.css');
+@import url('./section/modal-recipe.css');
+@import url('./section/modal-rating.css');
+@import url('./section/order-now.css');
+
+@import url('./section/favorites.css'); */
+
+:root {
+  /* ---------------element colors-----------------  */
+
+  /* background */
+  --color-page-bcg: rgb(248, 248, 248, 100%);
+  --color-element-bcg: rgb(5, 5, 5, 100%);
+  --color-menu-mobile-bcg: rgb(155, 181, 55, 100%);
+
+  /* text */
+  --color-title-text: rgb(5, 5, 5, 100%);
+  --color-green-title-text: rgb(155, 181, 55, 100%);
+  --color-poprecipe-text: rgb(5, 5, 5, 80%);
+
+
+  /* cards */
+  --color-card-hero-text: rgb(248, 248, 248, 60%);
+  --color-card-text: rgb(248, 248, 248, 100%);
+
+  /* filter */
+  --color-selector-text: rgb(5, 5, 5, 50%);
+  --color-selector-categ-text: rgb(5, 5, 5, 30%);
+  --color-selector-categ: rgb(5, 5, 5, 20%);
+
+  /* switch */
+  --color-switch-bcg: rgb(205, 205, 205, 100%);
+
+  /* button */
+  --color-button-text: rgb(5, 5, 5, 100%);
+  --color-button-bcg: rgb(248, 248, 248, 100%);
+  --color-button-card-bcg: rgb(155, 181, 55, 100%);
+
+  /* rating */
+  --color-rating-bcg: rgb(238, 161, 12, 100%);
+
+  /* hover and select color */
+  --color-hover-bcg: rgb(155, 181, 55, 100%);
+  --color-hover-text: rgb(5, 5, 5, 100%);
+  --color-selector-check: rgb(5, 5, 5, 100%);
+  --color-select-open-bcg: rgb(255, 255, 255, 100%);
+
+  /* modal recipe */
+  --color-modal-recipe-placeholder: rgb(5, 5, 5, 10%);
+  --color-modal-recipe-text: rgb(5, 5, 5, 80%);
+  --color-modal-recipe-rating-text: rgb(5, 5, 5, 50%);
+  --color-modal-recipe-tags-border: rgb(5, 5, 5, 20%);
+  --color-modal-recipe-backdrop: rgb(5, 5, 5, 30%);
+  --color-modal-recipe-backdground: rgb(255, 255, 255, 100%);
+
+  /* ---------------animation --------------------------*/
+
+  /* Transition */
+  --transition-dur-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* shadow */
+  --reviews-card-shadow: 0px 9.04932px 26.5717px rgba(215, 228, 249, 0.25);
+}
+
+[dark] {
+  /* text */
+  --color-page-bcg: rgb(22, 22, 22, 100%);
+  --color-title-text: rgb(5, 5, 5, 100%);
+  --color-element-bcg: rgb(255, 255, 255, 100%);
+  --color-title-text: rgb(255, 255, 255, 100%);
+  --color-button-bcg: rgb(30, 30, 30, 100%);
+  --color-button-text: rgb(255, 255, 255, 100%);
+  --color-selector-text: rgb(255, 255, 255, 50%);
+  --color-selector-check: rgb(255, 255, 255, 100%);
+  --color-select-open-bcg: rgb(5, 5, 5, 100%);
+  --color-selector-categ-text: rgb(255, 255, 255, 30%);
+  --color-selector-categ: rgb(255, 255, 255, 20%);
+  --color-poprecipe-text: rgb(255, 255, 255, 80%)
+}
+
+/* .body,html{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+} */
+.hero-slider{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: url(https://i.etsystatic.com/10606713/r/il/bb16fa/3099215194/il_1588xN.3099215194_71c8.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  animation: change 20s infinite ease-in-out;
+}
+.slider-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-transform: uppercase;
+}
+.logo-name{
+
+}
+.logo-text{
+  padding-bottom: 20px;
+  font-size: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-text{
+  background: #FFD800;
+  color: #0056B9;
+  padding: 8px 24px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 20px;
+}
+.slider-text:hover{
+  background: #0056B9;
+  color: #FFD800;
+}
+@keyframes change{
+  0%{
+    background-image: url(https://i.etsystatic.com/9145805/r/il/f7b2b6/3651458542/il_1588xN.3651458542_34p7.jpg);
+  }
+  20% {
+    background-image: url(https://i.etsystatic.com/10210799/r/il/ee31fb/2970393336/il_1588xN.2970393336_64wl.jpg);  
+  }
+  40% {
+    background-image: url(https://i.etsystatic.com/20638585/r/il/861787/5112883908/il_1588xN.5112883908_7ewt.jpg);
+  }
+  60% {
+    background-image: url(https://i.etsystatic.com/10606713/r/il/747710/5189298007/il_1588xN.5189298007_d21u.jpg);
+  }
+  80% {
+    background-image: url(https://i.etsystatic.com/10606713/r/il/2579f9/5189297967/il_1588xN.5189297967_6tmc.jpg);
+  }
+  100%{
+        background-image: url(https://i.etsystatic.com/9145805/r/il/3e10ce/3757167861/il_1588xN.3757167861_b4b6.jpg);
+  }
+}
